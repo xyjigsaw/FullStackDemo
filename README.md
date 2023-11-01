@@ -13,7 +13,7 @@ Full Stack Demo Tutorial
     ```bash
     npm install -g vue-cli
     
-    vue init webpack projec_name
+    vue init webpack project_name
     
     npm install axios -S
     npm i element-ui -S
