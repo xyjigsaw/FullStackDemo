@@ -24,6 +24,12 @@ Full Stack Demo Tutorial
     axios: 访问后端api工具
     
     element-ui: 后端UI工具
+
+    需要注意的时，在本项目下，由于已经创建好了，可以**直接**键入以下命令，下载所需的包：
+
+    ```bash
+    npm install
+    ```
     
 3. 在main.js文件中加入
     
@@ -73,15 +79,20 @@ Full Stack Demo Tutorial
     }
     </script>
     ```
+
+5. 调整前端样式
     
-5. 测试环境中运行
+    为了快速开发，我们采用[elementUI](https://element.eleme.io/)来美化前端，这部分大家不需要花太多时间精力，可以直接找模板套用即可。
+    
+6. 测试环境中运行
     
     ```bash
     npm run dev
     ```
+
     
 
-更多内容参考：[https://www.omegaxyz.com/2020/11/30/vue-manual/](https://www.omegaxyz.com/2020/11/30/vue-manual/)
+更多内容参考：[vue-manual-omegaxyz](https://www.omegaxyz.com/2020/11/30/vue-manual/)
 
 ## 后端
 
@@ -175,9 +186,9 @@ Full Stack Demo Tutorial
     
     可以采用fastapi自带的一个前端接口进行调试
     
-    进入http://127.0.0.1:8000/api/v1/docs页面调试
+    进入http://127.0.0.1:8000/api/v1/docs 页面调试
     
-    更多内容参考：[https://www.omegaxyz.com/2020/08/18/restful-fastapi/?highlight=fastapi](https://www.omegaxyz.com/2020/08/18/restful-fastapi/?highlight=fastapi)
+    更多内容参考：[fastapi-omegaxyz](https://www.omegaxyz.com/2020/08/18/restful-fastapi/?highlight=fastapi)
     
 
 ## 数据库

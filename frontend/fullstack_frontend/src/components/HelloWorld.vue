@@ -1,13 +1,19 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <h2>Ecosystem</h2>
-    <el-button icon="el-icon-search" @click="fetch_paper"></el-button>
-    <!-- table -->
-    <el-table :data="tableData" style="width: 100%">
-      <el-table-column prop="title" label="Title"></el-table-column>
-    </el-table>
+    <h2>
+      <a href="https://github.com/xyjigsaw/FullStackDemo" target="_blank">Github</a>
+      <a href="https://omegaxyz.com" target="_blank">Website</a>
+    </h2>
+    <el-input-number v-model="num" :min="1" :max="100" label="Number of papers"></el-input-number>
+    <el-button icon="el-icon-search" @click="fetch_paper(num)">Search</el-button>
+    <div style="padding: 10px 200px 10px 200px">
+      <!-- table -->
+      <el-table :data="tableData" style="width: 100%" stripe>
+        <el-table-column prop="title" label="Title"></el-table-column>
+        <el-table-column prop="date" label="Date" width="150"></el-table-column>
+      </el-table>
+    </div>
   </div>
 </template>
 
@@ -17,14 +23,15 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: 'FullStack Demo',
       tableData: [],
+      num: 10,
     }
   },
 
   methods: {
-    fetch_paper() {
-      const limit=8
+    fetch_paper(num) {
+      const limit=num
       const param = `num=${limit}`;
       // 在这里调接口
       axios
